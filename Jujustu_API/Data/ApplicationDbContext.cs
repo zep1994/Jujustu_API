@@ -11,7 +11,6 @@ namespace Jujustu_API.Data
         }
 
         public DbSet<Move> Moves { get; set; }
-        public DbSet<User> Users { get; set; }
 
     }
 }

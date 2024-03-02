@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Jujustu_API.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace Jujustu_API.Data
@@ -9,10 +10,8 @@ namespace Jujustu_API.Data
         {
         }
 
-        public DbSet<YourModel> YourModels { get; set; }
+        public DbSet<Move> Moves { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<YourModel>().ToTable("YourTableName");
-        }
     }
+}
